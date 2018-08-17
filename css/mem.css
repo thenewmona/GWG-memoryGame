@@ -1,0 +1,87 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.title {
+    text-align: center;
+    font-weight: bolder;
+}
+body {
+    height: 100vh;
+    display: flex;
+    background: rgb(75, 13, 100);
+}
+
+.memory-game {
+    width: 700px;
+    height: 700px;
+    margin: auto;
+    margin-top : 10px;
+    display: flex;
+    flex-wrap: wrap; 
+    perspective: 1000px;  
+}
+
+/*psuedo class learned about this last week with Judi */
+.memory-card {
+    width: calc(25% - 10px);
+    height: calc(33.333% - 10px);
+    margin: 5px;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+}
+
+.memory-card:active { 
+    transform: scale(.97);
+    transition: transform .2s;
+}
+
+.memory-card.flip{
+    transform: rotateY(180deg);
+}
+
+
+.front-face,
+.back-face {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    border-radius: 5px;
+    background: rgb(27, 131, 74);
+    border: 2px solid rgba(90, 138, 228, 0.89);
+    backface-visibility: hidden;
+}
+
+.front-face {
+    transform:rotateY(180deg);
+}
+
+/*score panel*/
+
+.scoreheader {
+    text-align: left;
+    width: 350;
+    margin-bottom: 10px;
+}
+
+.scoreheader .stars {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin: 0 5px 0 0 ;
+}
+.scoreheader .stars li{
+    list-style: none;
+    display: inline-block;
+}
+
+.scoreheader .restart {
+    float:right;
+    cursor: pointer;
+}
+
