@@ -1,4 +1,4 @@
-** Video Tutorials*
+# Video Tutorials
 
 *** Memory Game walkthrough ***
 https://www.youtube.com/watch?v=ZniVgo8U7ek FreeCodeCamp
@@ -31,7 +31,7 @@ https://www.youtube.com/watch?v=VlwSz2dXK_8 Buttom sound effects
 *** Fat Arrows ***
 https://www.youtube.com/watch?v=J85lRtO_yjY&index=27&t=0s&list=PLYpDB6ynhlX2sClpprIhYihBB0c-VqqkR
 
-**Udacity - Matthew Cranford**
+#Udacity - Matthew Cranford
 
 Part 1 - [Matthew Setup walkthrough](https://matthewcranford.com/memory-game-walkthrough-part-1-setup/)
 

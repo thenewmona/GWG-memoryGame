@@ -20,13 +20,11 @@ function flipCard() {
         //first click
         hasFlippedCard = true;
         firstCard = this;
-
-        return;
-    }
+        return;    }
         //second click        
         secondCard = this;
-
         checkForMatch();
+        addMove();
     }
 
 
@@ -36,12 +34,12 @@ function flipCard() {
 
 function checkForMatch() {
     let isMatch = firstCard.dataset.card === secondCard.dataset.card; //this is if its a match
-    //if they match 
+    
     //test if the cards match
     //console.log(firstCard.dataset.card);
     //console.log(secondCard.dataset.card);
     //cleaned up the code using a ternary operator 
-
+//if they match 
     isMatch ? disableCards() : unflipCards();
 
     // firstCard.removeEventListener('click', flipCard); //remove the eventListener if it's a match. You have to add the event and the function that you called 
@@ -51,8 +49,8 @@ function checkForMatch() {
 function disableCards() {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
-
     resetCard();
+    
 }
 
 // if they don't match 
@@ -78,5 +76,14 @@ function resetCard() {
     });
 })();
 
+let moves = 0;
+function addMove() {
+    moves++;
+    const movesText = document.querySelector('.moves');
+movesText.innerHTML = moves;
+}
+if (hasFlippedCard.length === 2) {
+    checkForMatch(clickTarget);
+}
 
 cards.forEach(card => card.addEventListener('click', flipCard));
