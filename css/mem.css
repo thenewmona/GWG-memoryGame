@@ -82,35 +82,49 @@ body {
 .scoreheader {
     text-align: left;
     width: 350;
-    margin-bottom: 25px;
+    margin-bottom:5px;
+    margin-left:5px;
 }
 
 .scoreheader .stars {
     margin: 0;
     padding: 0;
     display: inline-block;
-    margin: 0 5px 0 0 ;
+    margin: 0 15px 0 0 ;
+    
 }
 .scoreheader .stars li{
     list-style: none;
     display: inline-block;
     color: yellow;
+    padding-left: px;
+    font-size:30;
 }
 
 .scoreheader .reset {
     float:right;
     cursor: pointer;
-    
-}
+    padding-left: 350px;
+    font-size: 30px;
+    }
 
 .scoreheader .moves {
 font-size: 30px;
 color:wheat;
+margin-right:auto;
+
 }
+.scoreheader .move {
+    font-size: 20px;
+    color:rgb(7, 170, 94);
+    margin-left:em10px;
+    
+    }
 .scoreheader .timer {
     font-size: 30px;
     color:white;
-}
+    margin-left: 1em;
+   }
 
 /*Modal*/
 
