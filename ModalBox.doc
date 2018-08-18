@@ -1,0 +1,42 @@
+Basic Modal Box Implementation
+
+1. To create Modal Box, we start with Html5 element <dialog></dialog>
+
+2. Once we have added the <dialog> element to our html code, we can add the content to our dialog element
+For example
+```<dialog>
+<div>
+   <span class="close" onclick="closeModal()">&times;</span>
+   <h4>Modal Box Heading</h4>
+   <p> Content here</p>
+</div>
+</dialog>```
+In above content, we have attached the onclick event on element <span> to onClose js function. We will complete this function later.
+
+3. By default anything inside <dialog> element is not visible, so next next task is to display it.
+For this exercise, we will use the below button to launch it
+
+```<input type="button" onclick="showModal()" value="Show Modal"/>```
+Here we attach showModal js function to click event of button
+
+4. Finally, we will write the functions showModal and closeModal
+To open modal, we will use showModal() on <dialog> element and to close we have close() function.
+```function showModal() {
+  // retrieve <dialog> element using id 
+  let dlgModal = document.querySelector("#dlgModal");
+  // show dialog using showModal
+  dlgModal.showModal();
+}```
+```function closeModal() {
+  // retrieve <dialog> element using id   
+    let dlgModal = document.querySelector("#dlgModal");
+  // close dialog using close()
+    dlgModal.close();
+}```
+showModal() and close() are inbuilt function implemented for <dialog> element
+See below link for more details on these function -
+```https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog```
+
+
+For complete implementation details, checkout the codepen here - 
+https://codepen.io/sachin03/full/XYgLWP/

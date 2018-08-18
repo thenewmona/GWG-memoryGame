@@ -98,8 +98,7 @@ body {
 .scoreheader .stars li{
     list-style: none;
     display: inline-block;
-    color: yellow;
-    padding-left: px;
+    color: yellow;   
     font-size:30;
 }
 
