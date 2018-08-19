@@ -9,27 +9,53 @@ let firstCard, secondCard;
 function flipCard() {
     if (lockBoard) return;
     if (this === firstCard) return;
-
     this.classList.add('flip');
 
     //starting the timer
     
-
-    //this keyword is dynamically set to this context
-    //it is representing memory card element which is was fired
-    //toggle means if the class is there remove it, if it's not there then add it 
-
-    if (!hasFlippedCard) {
-        //first click
-        hasFlippedCard = true;
-        firstCard = this;
-        return;
-    }
-    //second click        
-    secondCard = this;
-    checkForMatch();
-    addMove();
 }
+// correct time format 
+
+// function startTimer() {
+//     timerID = setInterval(() => {
+//         time++;
+//         displayTime();
+//     }, 1000);
+// }
+
+// function timerDisplay() {
+//     let clock = document.querySelector('.timer');
+//     let minutes = Math.floor(time / 60);
+//     let seconds = time % 60;
+//     if (seconds  < 10) {
+//         clock.innerHTML = `${minutes}:0${seconds}`;
+//     } else {
+//         clock.innerHTML = `${minutes}:${seconds}`;
+//     }
+// }
+
+// //stopping the timer
+// function stopTimer () {
+//     clearInterval(timerID);
+// }
+
+//clearing the timer for game reset 
+
+//this keyword is dynamically set to this context
+//it is representing memory card element which is was fired
+//toggle means if the class is there remove it, if it's not there then add it 
+
+if (!hasFlippedCard) {
+    //first click
+    hasFlippedCard = true;
+    firstCard = this;
+    return; }
+
+//second click        
+secondCard = this;
+checkForMatch();
+addMove();
+
 
 
 // matching the cards - refactoring 
@@ -64,14 +90,13 @@ function unflipCards() {
         firstCard.classList.remove('flip');
         secondCard.classList.remove('flip');
         resetCard();
-
     }, 700);
 }
 
 function resetCard() {
     [hasFlippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
-    hideStar();
+    //hideStar();
 }
 
 (function shuffle() {
@@ -93,8 +118,8 @@ if (hasFlippedCard.length === 2) {
 }
 
 function star() {
-    if (moves === 16 || moves === 24) {
-        removeStars();
+    if (moves === 16 || moves === 24 || moves === 32) {
+        hideStar();
     }
 }
 
