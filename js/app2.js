@@ -55,7 +55,7 @@ if (!hasFlippedCard) {
 secondCard = this;
 checkForMatch();
 addMove();
-
+removeStar();
 
 
 // matching the cards - refactoring 
@@ -80,6 +80,7 @@ function disableCards() {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
     resetCard();
+    
 
 }
 
@@ -90,6 +91,7 @@ function unflipCards() {
         firstCard.classList.remove('flip');
         secondCard.classList.remove('flip');
         resetCard();
+        removeStar();
     }, 700);
 }
 
@@ -117,13 +119,8 @@ if (hasFlippedCard.length === 2) {
     //checkForMatch(clickTarget);
 }
 
-function star() {
-    if (moves === 16 || moves === 24 || moves === 32) {
-        hideStar();
-    }
-}
 
-function hideStar() {
+function hideStars() {
     let starsList = document.querySelectorAll('.stars li')
     for (stars of starsList) {
         if (stars.style.display !== 'none') {
@@ -132,8 +129,15 @@ function hideStar() {
         }
     }
 }
-//hideStars();
-//hideStars();*/
+hideStars();
+hideStars();
+
+function removeStar() {
+    if (moves === 16 || moves === 24) {
+        hideStars();
+    }
+}
+
 
 //const timerReset = document.querySelector(".timer");
 //let timeBegin, totalSeconds = 0;

@@ -29,6 +29,7 @@ function flipCard() {
     secondCard = this;
     checkForMatch();
     addMove();
+    
 }
 
 
@@ -63,15 +64,14 @@ function unflipCards() {
     setTimeout(() => { //so that we can see the card flip 
         firstCard.classList.remove('flip');
         secondCard.classList.remove('flip');
-        resetCard();
-
+        resetCard();       
     }, 700);
 }
 
 function resetCard() {
     [hasFlippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
-    hideStar();
+    
 }
 
 (function shuffle() {
@@ -90,15 +90,16 @@ function addMove() {
 }
 if (hasFlippedCard.length === 2) {
     //checkForMatch(clickTarget);
+    
 }
 
 function star() {
-    if (moves === 16 || moves === 24) {
-        removeStars();
+    if (moves === 16 || moves === 24 === 36) {
+        
     }
 }
 
-function hideStar() {
+function removeStars() {
     let starsList = document.querySelectorAll('.stars li')
     for (stars of starsList) {
         if (stars.style.display !== 'none') {
@@ -107,6 +108,7 @@ function hideStar() {
         }
     }
 }
+//removeStars();
 //hideStars();
 //hideStars();*/
 
@@ -127,3 +129,4 @@ function hideStar() {
 
 
 cards.forEach(card => card.addEventListener('click', flipCard));
+

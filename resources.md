@@ -31,6 +31,8 @@ https://www.youtube.com/watch?v=VlwSz2dXK_8 Buttom sound effects
 *** Fat Arrows ***
 https://www.youtube.com/watch?v=J85lRtO_yjY&index=27&t=0s&list=PLYpDB6ynhlX2sClpprIhYihBB0c-VqqkR
 
+http://www.developphp.com/video/JavaScript/Fat-Arrow-Functions-JavaScript-Programming-Tutorial
+
 #Udacity - Matthew Cranford
 
 Part 1 - [Matthew Setup walkthrough](https://matthewcranford.com/memory-game-walkthrough-part-1-setup/)
