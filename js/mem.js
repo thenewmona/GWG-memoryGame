@@ -29,7 +29,7 @@ function flipCard() {
     secondCard = this;
     checkForMatch();
     addMove();
-    
+    removeStars();    
 }
 
 
@@ -40,20 +40,19 @@ function flipCard() {
 function checkForMatch() {
     let isMatch = firstCard.dataset.card === secondCard.dataset.card; //this is if its a match
 
+    
     //test if the cards match
     //console.log(firstCard.dataset.card);
     //console.log(secondCard.dataset.card);
     //cleaned up the code using a ternary operator 
     //if they match 
     isMatch ? disableCards() : unflipCards();
-
-    // firstCard.removeEventListener('click', flipCard); //remove the eventListener if it's a match. You have to add the event and the function that you called 
-    //secondCard.removeEventListener('click', flipCard); //remove the eventListener if it's a match
+  
 }
 
 function disableCards() {
-    firstCard.removeEventListener('click', flipCard);
-    secondCard.removeEventListener('click', flipCard);
+    firstCard.removeEventListener('click', flipCard);//remove the eventListener if it's a match. You have to add the event and the function that you called 
+    secondCard.removeEventListener('click', flipCard);//remove the eventListener if it's a match
     resetCard();
 
 }
@@ -61,6 +60,7 @@ function disableCards() {
 // if they don't match 
 function unflipCards() {
     lockBoard = true;
+    
     setTimeout(() => { //so that we can see the card flip 
         firstCard.classList.remove('flip');
         secondCard.classList.remove('flip');
@@ -70,8 +70,7 @@ function unflipCards() {
 
 function resetCard() {
     [hasFlippedCard, lockBoard] = [false, false];
-    [firstCard, secondCard] = [null, null];
-    
+    [firstCard, secondCard] = [null, null];        
 }
 
 (function shuffle() {
@@ -91,15 +90,16 @@ function addMove() {
 if (hasFlippedCard.length === 2) {
     //checkForMatch(clickTarget);
     
-}
-
-function star() {
-    if (moves === 16 || moves === 24 === 36) {
-        
-    }
+    
 }
 
 function removeStars() {
+    if (moves === 10 || moves === 20 || moves === 30) {
+       removeStar(); 
+    }
+}
+
+function removeStar() {
     let starsList = document.querySelectorAll('.stars li')
     for (stars of starsList) {
         if (stars.style.display !== 'none') {
@@ -108,9 +108,10 @@ function removeStars() {
         }
     }
 }
+
+removeStars();
 //removeStars();
-//hideStars();
-//hideStars();*/
+//removeStars();
 
 //const timerReset = document.querySelector(".timer");
 //let timeBegin, totalSeconds = 0;

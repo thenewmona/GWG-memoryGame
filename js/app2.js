@@ -55,7 +55,7 @@ if (!hasFlippedCard) {
 secondCard = this;
 checkForMatch();
 addMove();
-removeStar();
+
 
 
 // matching the cards - refactoring 
@@ -98,7 +98,7 @@ function unflipCards() {
 function resetCard() {
     [hasFlippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
-    //hideStar();
+    
 }
 
 (function shuffle() {
