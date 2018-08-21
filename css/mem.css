@@ -33,7 +33,7 @@ body {
 
 .memory-game {
     width: 600px;
-    height: 600px;
+    height: 80vh;
     margin: auto;
     margin-top: 10px;
     display: flex;
