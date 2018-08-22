@@ -1,23 +1,24 @@
 # Video Tutorials
 
-*** Memory Game walkthrough ***
+Memory Game walkthrough
 https://www.youtube.com/watch?v=ZniVgo8U7ek FreeCodeCamp
 
-*** Modal ***
+###  Modal
 https://www.youtube.com/watch?v=o5ffh3KUaTM&index=23&t=282s&list=PLYpDB6ynhlX2sClpprIhYihBB0c-VqqkR
 
-Brad Traversy
+### Brad Traversy
 https://www.youtube.com/watch?v=6ophW7Ask_0& list=PLYpDB6ynhlX2sClpprIhYihBB0c-VqqkR
 
 https://www.youtube.com/watch?v=FTobY0baV7M&index=25&t=837s&list=PLYpDB6ynhlX2sClpprIhYihBB0c-VqqkR
 
-*** Stars ***
+### Stars
 
 stars and fontawesome
 https://www.youtube.com/watch?v=u3rylF3y3og&t=27s
 
 
-*** Timer ***
+### Timer
+
 timeout
 https://www.youtube.com/watch?v=u_6CqjQ-L8Q 
 
@@ -27,37 +28,46 @@ https://www.w3schools.com/js/js_timing.asp
 
 https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval #from Stacy in the studyroom
 
-*** .this ***
+### .this
+
 https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval#The_this_problem
 
+https://www.youtube.com/watch?v=eOI9GzMfd24
 
-*** EventListeners ***
+
+https://www.youtube.com/watch?v=y9Zc3NxmC1w
+
+https://zellwk.com/blog/this/?ck_subscriber_id=184987106
+
+### EventListeners
+
 https://www.youtube.com/watch?v=r64cVIGXbAM&index=16&t=0s&list=PLYpDB6ynhlX2sClpprIhYihBB0c-VqqkR
 
 https://www.youtube.com/watch?v=_Szdctv38Ow&index=28&t=0s&list=PLYpDB6ynhlX2sClpprIhYihBB0c-VqqkR
 
-*** adding audio **** 
+### adding audio
+
 https://www.youtube.com/watch?v=VlwSz2dXK_8 Buttom sound effects 
 
 
-*** Fat Arrows ***
+### Fat Arrows
 https://www.youtube.com/watch?v=J85lRtO_yjY&index=27&t=0s&list=PLYpDB6ynhlX2sClpprIhYihBB0c-VqqkR
 
 http://www.developphp.com/video/JavaScript/Fat-Arrow-Functions-JavaScript-Programming-Tutorial
 
-#Udacity - Matthew Cranford
+### Udacity - Matthew Cranford walkthrough's
 
 Part 1 - [Matthew Setup walkthrough](https://matthewcranford.com/memory-game-walkthrough-part-1-setup/)
 
-Part 2 - Toggling Cards: https://matthewcranford.com/memory-game-walkthrough-part-2-toggling-cards/ 8
+Part 2 - [Toggling Cards](https://matthewcranford.om/memory-game-walkthrough-part-2-toggling-cards/)
 
-Part 3 - Matching Pairs: https://matthewcranford.com/memory-game-walkthrough-part-3-matching-pairs/ 20
+Part 3 - [Matching Pairs] (https://matthewcranford.com/memory-game-walkthrough-part-3-matching-pairs/)
 
-Part 4 - Shuffling Decks: https://matthewcranford.com/memory-game-walkthrough-part-4-shuffling-decks/
+Part 4 - [(Shuffling Decks] https://matthewcranford.com/memory-game-walkthrough-part-4-shuffling-decks/)
 
 Part 5 - Moves & Stars: https://matthewcranford.com/memory-game-walkthrough-part-5-moves-stars/
 
-Part 6 - The Clock: https://matthewcranford.com/memory-game-walkthrough-part-6-the-clock/
+Part 6 - [The Clock] (https://matthewcranford.com/memory-game-walkthrough-part-6-the-clock/)
 
 /*control flow*/
 
