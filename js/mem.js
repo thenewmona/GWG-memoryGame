@@ -4,23 +4,22 @@ let hasFlippedCard = false;
 let lockBoard = false; //this is so the cards won't flip back once they are matched 
 let firstCard, secondCard;
 
+
 //lets us know which card the player clicked so that we can do the match 
 
 function flipCard() {
     if (lockBoard) return;
-    if (this === firstCard) return;
+    if (this === firstCard) return;//https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval#The_this_problem
 
-    this.classList.add('flip');
-
-    //starting the timer
+    this.classList.add('flip'); 
     
 
     //this keyword is dynamically set to this context
     //it is representing memory card element which is was fired
     //toggle means if the class is there remove it, if it's not there then add it 
+    //not really understanding how .this works 
 
-    if (!hasFlippedCard) {
-        //first click
+    if (!hasFlippedCard) {        //first click
         hasFlippedCard = true;
         firstCard = this;
         return;
@@ -31,7 +30,18 @@ function flipCard() {
     addMove();
     removeStars();    
 }
-
+//starting the timer
+//I think I need to start the timer here because this is the start of the game 
+//https://matthewcranford.com/memory-game-walkthrough-part-6-the-clock/
+//cards.forEach(card => card.addEventListener('click', flipCard)); = loop thorugh cards 
+// let clickCard = card.target;// returns the element that triggered the event
+// let timerOff = true;
+// if (isClickValid(clickCard)) {
+// }
+// if (timerOff){
+//     startTimer();
+//     timerOff = false;
+// }
 
 // matching the cards - refactoring 
 //determining if the the cards match 
@@ -61,7 +71,9 @@ function disableCards() {
 function unflipCards() {
     lockBoard = true;
     
-    setTimeout(() => { //so that we can see the card flip 
+    setTimeout(() => { 
+        //so that we can see the card flip
+        // setTimeout excutes after waiting a specified amount of time
         firstCard.classList.remove('flip');
         secondCard.classList.remove('flip');
         resetCard();       
@@ -108,23 +120,35 @@ function removeStar() {
         }
     }
 }
-
 removeStars();
-//removeStars();
-//removeStars();
 
-//const timerReset = document.querySelector(".timer");
-//let timeBegin, totalSeconds = 0;
-//timerReset.innerHTML =totalSeconds;
+ // timer https://www.w3schools.com/js/js_timing.asp
+ //start timer 
+// let timeStart;
+// function startTimer() {
+//     timeStart = setInterval(() => {//setInterval repeats execution of the funtion
+//         time++;
+//         showTimer();
+//         console.log(time);
+//     },1000);
+// }
+// startTimer();
 
-//function startTimer () {
-//let timeBegin =setInterval(function() {
-//increase the totalSeconds by 1
-//totalSeconds++;
-//updating the HTML container with e new time
-// timerReset.innerHTML = totalSeconds;
-//}, 1000);
-//}
+ // show timer
+// let time = 0;
+// function showTimer() {
+//     let timeShow = document.querySelector('.timer');
+//     timer.innerHTML = time;
+// }
+// let minutes = Math.floor(time /60);
+// let seconds = Math.floor(time % 60);
+
+
+ //stop timer
+// function stopTimer();
+// clearInterval(timeStart);//clearInterval needs to use the variable from the setInterval 
+
+ //reset timer 
 
 
 
