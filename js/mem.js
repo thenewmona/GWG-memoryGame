@@ -33,15 +33,16 @@ function flipCard() {
 //starting the timer
 //I think I need to start the timer here because this is the start of the game 
 //https://matthewcranford.com/memory-game-walkthrough-part-6-the-clock/
-//cards.forEach(card => card.addEventListener('click', flipCard)); = loop thorugh cards 
-// let clickCard = card.target;// returns the element that triggered the event
-// let timerOff = true;
-// if (isClickValid(clickCard)) {
-// }
-// if (timerOff){
-//     startTimer();
-//     timerOff = false;
-// }
+//cards.forEach(card => card.addEventListener('click', flipCard)); = loop thorugh cards
+
+let clickCard = card.target;// returns the element that triggered the event
+let timerOff = true;
+if (isClickValid(clickCard)) {
+}
+if (timerOff){
+    startTimer();
+    timerOff = false;
+}
 
 // matching the cards - refactoring 
 //determining if the the cards match 
@@ -122,31 +123,31 @@ function removeStar() {
 }
 removeStars();
 
- // timer https://www.w3schools.com/js/js_timing.asp
- //start timer 
-// let timeStart;
-// function startTimer() {
-//     timeStart = setInterval(() => {//setInterval repeats execution of the funtion
-//         time++;
-//         showTimer();
-//         console.log(time);
-//     },1000);
-// }
-// startTimer();
+ timer https://www.w3schools.com/js/js_timing.asp
+ start timer 
+let timeStart;
+function startTimer() {
+    timeStart = setInterval(() => {//setInterval repeats execution of the funtion
+        time++;
+        showTimer();
+        console.log(time);
+    },1000);
+}
+startTimer();
 
- // show timer
-// let time = 0;
-// function showTimer() {
-//     let timeShow = document.querySelector('.timer');
-//     timer.innerHTML = time;
-// }
-// let minutes = Math.floor(time /60);
-// let seconds = Math.floor(time % 60);
+ show timer
+let time = 0;
+function showTimer() {
+    let timeShow = document.querySelector('.timer');
+    timer.innerHTML = time;
+}
+let minutes = Math.floor(time /60);
+let seconds = Math.floor(time % 60);
 
 
- //stop timer
-// function stopTimer();
-// clearInterval(timeStart);//clearInterval needs to use the variable from the setInterval 
+ stop timer
+function stopTimer();
+clearInterval(timeStart);//clearInterval needs to use the variable from the setInterval 
 
  //reset timer 
 
