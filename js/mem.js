@@ -157,7 +157,7 @@ startTimer();
 function stopTimer() {
 clearInterval(timeStart);//clearInterval needs to use the variable from the setInterval 
 } 
-
+stopTimer();
 //reset timer 
 
 
