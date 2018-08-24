@@ -9,17 +9,17 @@ let firstCard, secondCard;
 
 function flipCard() {
     if (lockBoard) return;
-    if (this === firstCard) return;//https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval#The_this_problem
+    if (this === firstCard) return; //https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval#The_this_problem
 
-    this.classList.add('flip'); 
-    
+    this.classList.add('flip');
+
 
     //this keyword is dynamically set to this context
     //it is representing memory card element which is was fired
     //toggle means if the class is there remove it, if it's not there then add it 
     //not really understanding how .this works 
 
-    if (!hasFlippedCard) {        //first click
+    if (!hasFlippedCard) { //first click
         hasFlippedCard = true;
         firstCard = this;
         return;
@@ -28,21 +28,21 @@ function flipCard() {
     secondCard = this;
     checkForMatch();
     addMove();
-    removeStars();    
+    removeStars();
 }
 //starting the timer
 //I think I need to start the timer here because this is the start of the game 
 //https://matthewcranford.com/memory-game-walkthrough-part-6-the-clock/
 //cards.forEach(card => card.addEventListener('click', flipCard)); = loop thorugh cards
 
-let clickCard = card.target;// returns the element that triggered the event
-let timerOff = true;
-if (isClickValid(clickCard)) {
-}
-if (timerOff){
-    startTimer();
-    timerOff = false;
-}
+// let clickCard = card.target;// returns the element that triggered the event
+// let timerOff = true;
+// if (isClickValid(clickCard)) {
+// }
+// if (timerOff){
+//     startTimer();
+//     timerOff = false;
+// }
 
 // matching the cards - refactoring 
 //determining if the the cards match 
@@ -51,19 +51,19 @@ if (timerOff){
 function checkForMatch() {
     let isMatch = firstCard.dataset.card === secondCard.dataset.card; //this is if its a match
 
-    
+
     //test if the cards match
     //console.log(firstCard.dataset.card);
     //console.log(secondCard.dataset.card);
     //cleaned up the code using a ternary operator 
     //if they match 
     isMatch ? disableCards() : unflipCards();
-  
+
 }
 
 function disableCards() {
-    firstCard.removeEventListener('click', flipCard);//remove the eventListener if it's a match. You have to add the event and the function that you called 
-    secondCard.removeEventListener('click', flipCard);//remove the eventListener if it's a match
+    firstCard.removeEventListener('click', flipCard); //remove the eventListener if it's a match. You have to add the event and the function that you called 
+    secondCard.removeEventListener('click', flipCard); //remove the eventListener if it's a match
     resetCard();
 
 }
@@ -71,19 +71,20 @@ function disableCards() {
 // if they don't match 
 function unflipCards() {
     lockBoard = true;
-    
-    setTimeout(() => { 
+
+    setTimeout(() => {
         //so that we can see the card flip
         // setTimeout excutes after waiting a specified amount of time
         firstCard.classList.remove('flip');
         secondCard.classList.remove('flip');
-        resetCard();       
+        resetCard();
     }, 700);
 }
 
 function resetCard() {
     [hasFlippedCard, lockBoard] = [false, false];
-    [firstCard, secondCard] = [null, null];        
+    [firstCard, secondCard] = [null, null];
+    
 }
 
 (function shuffle() {
@@ -102,13 +103,13 @@ function addMove() {
 }
 if (hasFlippedCard.length === 2) {
     //checkForMatch(clickTarget);
-    
-    
+
+
 }
 
 function removeStars() {
     if (moves === 10 || moves === 20 || moves === 30) {
-       removeStar(); 
+        removeStar();
     }
 }
 
@@ -123,19 +124,15 @@ function removeStar() {
 }
 removeStars();
 
- timer https://www.w3schools.com/js/js_timing.asp
- start timer 
-let timeStart;
-function startTimer() {
-    timeStart = setInterval(() => {//setInterval repeats execution of the funtion
-        time++;
-        showTimer();
-        console.log(time);
-    },1000);
-}
-startTimer();
+//timer https://www.w3schools.com/js/js_timing.asp
+//start timer 
 
- show timer
+//can see it moving in the console but it still won't move in the game
+//Uncaught ReferenceError: timer is not defined
+//  at showTimer (mem.js:139)
+//at setInterval (mem.js:149)
+
+//show timer
 let time = 0;
 function showTimer() {
     let timeShow = document.querySelector('.timer');
@@ -144,15 +141,27 @@ function showTimer() {
 let minutes = Math.floor(time /60);
 let seconds = Math.floor(time % 60);
 
+//start timer 
+let timeStart;
+function startTimer() {
+    timeStart = setInterval(() => { //setInterval repeats execution of the funtion
+        time++;
+        showTimer();
+        console.log(time);
+    }, 1000);
+}
+startTimer();
 
- stop timer
-function stopTimer();
-clearInterval(timeStart);//clearInterval needs to use the variable from the setInterval 
 
- //reset timer 
+
+
+//stop timer
+//function stopTimer()
+//clearInterval(timeStart);//clearInterval needs to use the variable from the setInterval 
+
+//reset timer 
 
 
 
 
 cards.forEach(card => card.addEventListener('click', flipCard));
-

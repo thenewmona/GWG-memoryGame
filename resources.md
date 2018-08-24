@@ -61,32 +61,40 @@ Part 1 - [Matthew Setup walkthrough](https://matthewcranford.com/memory-game-wal
 
 Part 2 - [Toggling Cards](https://matthewcranford.om/memory-game-walkthrough-part-2-toggling-cards/)
 
-Part 3 - [Matching Pairs] (https://matthewcranford.com/memory-game-walkthrough-part-3-matching-pairs/)
+Part 3 - [Matching Pairs](https://matthewcranford.com/memory-game-walkthrough-part-3-matching-pairs/)
 
-Part 4 - [(Shuffling Decks] https://matthewcranford.com/memory-game-walkthrough-part-4-shuffling-decks/)
 
-Part 5 - Moves & Stars: https://matthewcranford.com/memory-game-walkthrough-part-5-moves-stars/
+Part 4 - [(Shuffling Decks](https://matthewcranford.com/memory-game-walkthrough-part-4-shuffling-decks/) 
 
-Part 6 - [The Clock] (https://matthewcranford.com/memory-game-walkthrough-part-6-the-clock/)
+Part 5 - [Moves & Stars](https://matthewcranford.com/memory-game-walkthrough-part-5-moves-stars/) 
 
-/*control flow*/
+Part 6 - [The Clock](https://matthewcranford.com/memory-game-walkthrough-part-6-the-clock/) 
+
+Part 7 - [Making the Modal](https://matthewcranford.com/memory-game-walkthrough-part-7-making-a-modal/)
+
+Part 8 - [Putting it all together](https://matthewcranford.com/memory-game-walkthrough-part-8-putting-it-all-together/)
+
+## control flow
 
 https://www.codecademy.com/en/forum_questions/513a15984beaecc38e000cd1
 
 
-/*click Target*/
+## click Target
+
 https://medium.com/@florenceliang/javascript-event-delegation-and-event-target-vs-event-currenttarget-c9680c3a46d1 
 https://www.w3schools.com/jsref/event_target.asp
 https://stackoverflow.com/questions/7723188/what-properties-can-i-use-with-event-target
 
-/*Array.from* html-nodelist/
+## Array.from html-nodelist
 https://www.w3schools.com/jsref/jsref_from.asp
 https://hackernoon.com/htmlcollection-nodelist-and-array-of-objects-da42737181f9
 
-/* arrow function */
+## arrow function 
+
 https://codeburst.io/javascript-arrow-functions-for-beginners-926947fc0cdc
 
-/*toggle*/
+##toggle
+
 https://stackoverflow.com/questions/20301235/how-to-toggle-class-using-pure-javascript-in-html
 
 using .push in the turnCards function 
@@ -94,23 +102,25 @@ https://www.w3schools.com/jsref/jsref_push.asp
 
 
 
-?*Attributes*/
+# Attributes
 
-/*Sounds*/
+## Sounds
 https://freesound.org/
 
-/*Fonts and SVG's*/
+## Fonts and SVG's
 https://image.online-convert.com/convert-to-svg
 
 *front of card* Udacity VR Development 
 https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTdZkBjDm2Shuaq-SRUQUD11wpQHnCilA8s0S1cufUNUV22WzZ
 
 *three svg*
+
 https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy93kzVADXMQ-SpDKA7mP_gwmNnRYyeiNnDp4rm-e-EqFrtP5a
 
 *html*
+
 https://www.google.com/imgres?imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F0%2F00%2FHTML5_logo_black.svg%2F2000px-HTML5_logo_black.svg.png&imgrefurl=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3AHTML5_logo_black.svg&docid=ylZV0bDskJa-_M&tbnid=I3rh9uY6W7N-BM%3A&vet=10ahUKEwinoOLWkffcAhWs34MKHcxGBjMQMwhXKBAwEA..i&w=2000&h=2000&bih=902&biw=1680&q=html%20svg&ved=0ahUKEwinoOLWkffcAhWs34MKHcxGBjMQMwhXKBAwEA&iact=mrc&uact=8
 
-/* modal */
+## Modal 
 
 https://www.w3schools.com/howto/howto_js_popup.asp
