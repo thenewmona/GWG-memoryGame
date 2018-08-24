@@ -85,7 +85,7 @@ function unflipCards() {
 function resetCard() {
     [hasFlippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
-    
+
 }
 
 (function shuffle() {
@@ -130,35 +130,49 @@ removeStars();
 
 //can see it moving in the console but it still won't move in the game
 //Uncaught ReferenceError: timer is not defined
-//  at showTimer (mem.js:139)
+//at showTimer (mem.js:139)
 //at setInterval (mem.js:149)
 
 //show timer
 
 function showTimer() {
     let timer = document.querySelector('.timer');
+    console.log(timer);
     timer.innerHTML = time;
 }
-let minutes = Math.floor(time /60);
+let minutes = Math.floor(time / 60);
 let seconds = Math.floor(time % 60);
 
-//start timer 
+//start timer - 8/24 what is going to start the timer. 
+//Timer needs to start when the first card is clicked 
 let timeStart;
+
 function startTimer() {
     timeStart = setInterval(() => { //setInterval repeats execution of the funtion
         time++;
         showTimer();
-        console.log(time);
+        //console.log(time);
     }, 1000);
 }
-startTimer();
+//startTimer();
 
 //stop timer
+let timer;
+
 function stopTimer() {
-clearInterval(timeStart);//clearInterval needs to use the variable from the setInterval 
-} 
+    clearInterval(timeStart); //clearInterval needs to use the variable from the setInterval 
+}
 stopTimer();
-//reset timer 
+//reset game - reset clock - moves -stars- reshuffle the cards 
+//reset timer - stopTimer 
+//reset moves = 0
+//reset stars = 0
+//reset cards
+
+//game over - stop clock - modal pop's up 
+
+//replay game
+
 
 
 
