@@ -3,6 +3,7 @@ const cards = document.querySelectorAll('.memory-card');
 let hasFlippedCard = false;
 let lockBoard = false; //this is so the cards won't flip back once they are matched 
 let firstCard, secondCard;
+let time = 0;
 
 
 //lets us know which card the player clicked so that we can do the match 
@@ -133,9 +134,9 @@ removeStars();
 //at setInterval (mem.js:149)
 
 //show timer
-let time = 0;
+
 function showTimer() {
-    let timeShow = document.querySelector('.timer');
+    let timer = document.querySelector('.timer');
     timer.innerHTML = time;
 }
 let minutes = Math.floor(time /60);
@@ -152,12 +153,10 @@ function startTimer() {
 }
 startTimer();
 
-
-
-
 //stop timer
-//function stopTimer()
-//clearInterval(timeStart);//clearInterval needs to use the variable from the setInterval 
+function stopTimer() {
+clearInterval(timeStart);//clearInterval needs to use the variable from the setInterval 
+} 
 
 //reset timer 
 
