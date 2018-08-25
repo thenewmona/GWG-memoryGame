@@ -4,7 +4,7 @@ let hasFlippedCard = false;
 let lockBoard = false; //this is so the cards won't flip back once they are matched 
 let firstCard, secondCard;
 let time = 0;
-
+let timer;
 
 //lets us know which card the player clicked so that we can do the match 
 
@@ -24,7 +24,9 @@ function flipCard() {
         hasFlippedCard = true;
         firstCard = this;
         return;
+        
     }
+   
     //second click        
     secondCard = this;
     checkForMatch();
@@ -34,21 +36,11 @@ function flipCard() {
 //starting the timer
 //I think I need to start the timer here because this is the start of the game 
 //https://matthewcranford.com/memory-game-walkthrough-part-6-the-clock/
-//cards.forEach(card => card.addEventListener('click', flipCard)); = loop thorugh cards
 
-// let clickCard = card.target;// returns the element that triggered the event
-// let timerOff = true;
-// if (isClickValid(clickCard)) {
-// }
-// if (timerOff){
-//     startTimer();
-//     timerOff = false;
-// }
 
 // matching the cards - refactoring 
 //determining if the the cards match 
 // using the data attribute within the HTML to do this 
-
 function checkForMatch() {
     let isMatch = firstCard.dataset.card === secondCard.dataset.card; //this is if its a match
 
@@ -137,32 +129,34 @@ removeStars();
 
 function showTimer() {
     let timer = document.querySelector('.timer');
-    console.log(timer);
+    //console.log(timer);
     timer.innerHTML = time;
 }
 let minutes = Math.floor(time / 60);
 let seconds = Math.floor(time % 60);
+ //start timer - 8/24 what is going to start the timer. 
+//Timer needs to start when the first card is clicked 
+let timeStart;
 
 //start timer - 8/24 what is going to start the timer. 
 //Timer needs to start when the first card is clicked 
-let timeStart;
+
 
 function startTimer() {
     timeStart = setInterval(() => { //setInterval repeats execution of the funtion
         time++;
         showTimer();
-        //console.log(time);
+        console.log(time);
     }, 1000);
 }
-//startTimer();
+startTimer();
+
+
 
 //stop timer
-let timer;
 
-function stopTimer() {
-    clearInterval(timeStart); //clearInterval needs to use the variable from the setInterval 
-}
-stopTimer();
+
+
 //reset game - reset clock - moves -stars- reshuffle the cards 
 //reset timer - stopTimer 
 //reset moves = 0
@@ -172,9 +166,6 @@ stopTimer();
 //game over - stop clock - modal pop's up 
 
 //replay game
-
-
-
 
 
 cards.forEach(card => card.addEventListener('click', flipCard));
