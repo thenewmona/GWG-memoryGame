@@ -3,8 +3,7 @@ const cards = document.querySelectorAll('.memory-card');
 let hasFlippedCard = false;
 let lockBoard = false; //this is so the cards won't flip back once they are matched 
 let firstCard, secondCard;
-let time = 0;
-let timer;
+
 
 //lets us know which card the player clicked so that we can do the match 
 
@@ -14,19 +13,17 @@ function flipCard() {
 
     this.classList.add('flip');
 
-
     //this keyword is dynamically set to this context
     //it is representing memory card element which is was fired
     //toggle means if the class is there remove it, if it's not there then add it 
     //not really understanding how .this works 
 
-    if (!hasFlippedCard) { //first click
+    if (!hasFlippedCard) { //first click !
         hasFlippedCard = true;
         firstCard = this;
         return;
-        
     }
-   
+
     //second click        
     secondCard = this;
     checkForMatch();
@@ -43,7 +40,7 @@ function flipCard() {
 // using the data attribute within the HTML to do this 
 function checkForMatch() {
     let isMatch = firstCard.dataset.card === secondCard.dataset.card; //this is if its a match
-
+    startTimer();
 
     //test if the cards match
     //console.log(firstCard.dataset.card);
@@ -107,7 +104,7 @@ function removeStars() {
 }
 
 function removeStar() {
-    let starsList = document.querySelectorAll('.stars li')
+    let starsList = document.querySelectorAll('.stars li');
     for (stars of starsList) {
         if (stars.style.display !== 'none') {
             stars.style.display = 'none';
@@ -118,30 +115,24 @@ function removeStar() {
 removeStars();
 
 //timer https://www.w3schools.com/js/js_timing.asp
-//start timer 
-
-//can see it moving in the console but it still won't move in the game
-//Uncaught ReferenceError: timer is not defined
-//at showTimer (mem.js:139)
-//at setInterval (mem.js:149)
 
 //show timer
+let time = 0;
+let timer;
+let minutes;
+let seconds;
+
+// let timerNr = true; //timerNotRunning
+// let timerOff = true;
 
 function showTimer() {
     let timer = document.querySelector('.timer');
+    let minutes = Math.floor(time / 60);
+    let seconds = Math.floor(time % 60);
     //console.log(timer);
-    timer.innerHTML = time;
+    timer.innerHTML = minutes + ':' + seconds;
 }
-let minutes = Math.floor(time / 60);
-let seconds = Math.floor(time % 60);
- //start timer - 8/24 what is going to start the timer. 
-//Timer needs to start when the first card is clicked 
-let timeStart;
-
-//start timer - 8/24 what is going to start the timer. 
-//Timer needs to start when the first card is clicked 
-
-
+//start timer 
 function startTimer() {
     timeStart = setInterval(() => { //setInterval repeats execution of the funtion
         time++;
@@ -149,12 +140,18 @@ function startTimer() {
         console.log(time);
     }, 1000);
 }
-startTimer();
 
+// //startTimer();
+// if (timerNr) {
+//     startTimer();
+//     timerNr = true;
+// }
+//stopping the timer
 
-
-//stop timer
-
+// function stopTimer() {
+//     clearInterval(timeStart); //clearInterval needs to use the variable from the setInterval 
+// }
+// stopTimer();
 
 
 //reset game - reset clock - moves -stars- reshuffle the cards 
