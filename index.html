@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 
+<!--consequence stars -->
 
 <body>
 
@@ -25,13 +26,13 @@
 
       <ul class="stars">
         <li>
-          <i id= "star1" class="fa fa-star fa-2x"></i>
+          <i id="star1" class="fa fa-star fa-2x"></i>
         </li>
         <li>
-          <i id= "star2" class="fa fa-star fa-2x"></i>
+          <i id="star2" class="fa fa-star fa-2x"></i>
         </li>
         <li>
-          <i id= "star3" class="fa fa-star fa-2x"></i>
+          <i id="star3" class="fa fa-star fa-2x"></i>
         </li>
       </ul>
 
@@ -45,11 +46,46 @@
       <!--restart -->
       <div class="reset">reset
         <i class="fa fa-repeat"></i>
-        </div>
+      </div>
     </section>
 
-    <!--game board-->
 
+    <!--modal Brad Traversy https://www.youtube.com/watch?v=6ophW7Ask_0 need to reset game to Play again button -->
+    <button id="modalBtn" class="button">Play Again!!!</button><!--also the reset button -->
+    <!--need this inside the modal not outside -->
+
+    <div id="simpleModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+            
+          <span class="closeBtn">&times;</span>
+          
+          <h2> Yeah !!!!</h2>
+        </div>
+
+        <div class="modal-body">
+          <h3>Congratulations!</h3>
+          <p>Your finishing time is
+            <div class="clock">0:00</div></p>
+            <div class="moves">Total moves = 0</div> 
+          </p>
+          <p>Your ranking 
+            <ul style = "list-style-type: none"class =stars">
+              <li><i class="fa fa-star"></i></li>
+              <li><i class="fa fa-star"></i></li>
+              <li><i class="fa fa-star"></i></li>
+            </ul>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <h3>Your Memory is Great !!!!</h3>
+          <button id="modalBtn" class="button">Play Again!!!</button>
+          
+        </div>
+      </div>
+    </div>
+
+    <!--game board-->
     <section class="fcc memory-game">
 
       <div class="memory-card" data-card="aurelia">
@@ -132,8 +168,6 @@
         <img class="back-face" src="img/LEARN.svg" alt="JS Badge" />
       </div>
 
-
-      <!--modal -->
       <!--background hide -->
       <!--body-->
       <!--heading with title -->
@@ -141,10 +175,33 @@
       <!--replay buttons yes/no -->
       <!---->
       <!---->
-
-
     </section>
-    <script src="js/app3.js"></script>
+    <!--modal Brad Traversy https://www.youtube.com/watch?v=6ophW7Ask_0-->
+    <!-- <button id="modalBtn" class="button">Click Here</button>
+
+    <div id="simpleModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+            <span class="closeBtn">&times;</span>
+            <h2>Modal Header</h2>
+            </div>
+            <div>Hello 
+                
+            </div>
+            <div class="modal-body">
+                <p>Hello ... I am Mona's Modal </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, ea.</p>
+            </div>
+           <div class="modal-footer">
+            <h3>Modal Footer</h3>   
+           </div>
+        </div>
+    </div>      -->
+
+
+
+
+    <script src="js/mem.js"></script>
 </body>
 
 </html>

@@ -18,6 +18,7 @@ body {
     padding: 0;
     display: flex;
     background: rgb(75, 13, 100);
+    background: linear-gradient(rgb(94, 11, 228), rgb(12, 151, 74));
     /* height: 80vh;
     display: flex;
     background: rgb(75, 13, 100);*/
@@ -42,7 +43,6 @@ body {
 }
 
 /*psuedo class learned about this last week with Judi */
-
 .memory-card {
     width: calc(25% - 10px);
     height: calc(33.333% - 10px);
@@ -79,7 +79,6 @@ body {
 }
 
 /*score panel*/
-
 .scoreheader {
     text-align: left;
     width: 350;
@@ -126,8 +125,91 @@ body {
     margin-left: 1em;
 }
 
-/*Modal*/
+/*Modal - Brad Traversy https://www.youtube.com/watch?v=6ophW7Ask_0*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 27px;
+    line-height: 1.6;
+}
 
-.hide {
+.button {
+    background-color: rgb(20, 163, 92);
+    padding: 1em 2em;
+    color: #fff;
+    border: 0;
+}
+
+.button:hover {
+    background: rgb(0, 12, 4);
+}
+
+.modal {
     display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(7, 1, 17, 0.4);
+}
+
+.modal-content {
+    background-color: #15f032;
+    margin: 30% auto;
+    width: 40%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    animation-name: modalopen;
+    animation-duration: 3s;
+    text-align: center;
+}
+
+.modal-header h2,
+.modal-footer h3 {
+    margin: 0;
+}
+
+.modal-header {
+    background: blueviolet;
+    background: linear-gradient(rgb(9, 143, 27), rgb(51, 33, 151));
+    padding: 15px;
+    color: #f4f4f4;
+    text-align: center;
+}
+
+.modal-body {
+    padding: 10px 20px;
+}
+
+.modal-footer {
+    background: blueviolet;
+    background: linear-gradient(rgb(9, 143, 27), rgb(51, 33, 151));
+    padding: 10px;
+    color: #f4f4f4;
+    text-align: center;
+}
+
+.closeBtn {
+    color: rgb(46, 21, 92);
+    float: right;
+    font-size: 30px;
+    color: wheat;
+}
+
+.closeBtn:hover,
+.closeBtn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@keyframes modalopen {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
 }
