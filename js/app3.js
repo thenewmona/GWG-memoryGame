@@ -3,6 +3,8 @@ const cards = document.querySelectorAll('.memory-card');
 let hasFlippedCard = false;
 let lockBoard = false; //this is so the cards won't flip back once they are matched 
 let firstCard, secondCard;
+let timeStart = "";
+let matchCount = 0;
 
 
 //lets us know which card the player clicked so that we can do the match 
@@ -23,7 +25,7 @@ function flipCard() {
         firstCard = this;
         startTimer();
         return;
-        
+
     }
 
     //second click        
@@ -49,16 +51,26 @@ function checkForMatch() {
     //console.log(secondCard.dataset.card);
     //cleaned up the code using a ternary operator 
     //if they match 
-    isMatch ? disableCards() : unflipCards();    
-        //startTimer();
-    }
+    isMatch ? disableCards() : unflipCards();
+    //startTimer();
+}
 
-
+//if => 8 modal popup 
 function disableCards() {
     firstCard.removeEventListener('click', flipCard); //remove the eventListener if it's a match. You have to add the event and the function that you called 
     secondCard.removeEventListener('click', flipCard); //remove the eventListener if it's a match
     resetCard();
+    matchCount++;
+    console.log(matchCount);
+    if (matchCount>=8) {
+        console.log('Game over!');
+        stopTimer();
+        //modal needs to pop up 
+    }
+}
 
+function showModal() {
+    
 }
 
 // if they don't match 
@@ -119,7 +131,7 @@ function removeStar() {
 removeStars();
 
 //timer 
-let stopTimer = false;//need this for the timer and the reset 
+//let stopTimer = false;//need this for the timer and the reset 
 let resetGame = true; //need this for game reset and modal 
 
 function showTimer() {
@@ -131,36 +143,47 @@ function showTimer() {
 }
 
 function startTimer() {
-    if (resetGame == true) {        
+    if (resetGame == true) {
         let timer = 0;
         let hour = 0;
         let minute = 0;
         let second = 0;
-        timeStart = setInterval(() => {//8-30 if i use => timer works, change it per https://www.w3schools.com/js/js_timing.asp it acts like it wants to start but doesnt
-            ++timer;
-            hour = Math.floor(timer / 3600);
-            minute = Math.floor((timer - hour * 3600) / 60);
-            second = timer - hour * 3600 - minute * 60;
-            if (hour < 10) hour = '0' + hour;
-            if (minute < 10) minute = '0' + second;
-            document.querySelector(".timer").innerHTML = hour + ':' + minute + ':' + second;
-            if (stopTimer) {
-                document.querySelector(".timer").innerHTML = "00:00";
-                timer = 0;
-                hour = 0;
-                minute = 0;
-                second = 0;
-                return;
-            showTimer();
-            }
-        },1000);
+        if (timeStart === "") {
+            timeStart = setInterval(() => { //8-30 if i use => timer works, change it per https://www.w3schools.com/js/js_timing.asp it acts like it wants to start but doesnt
+                ++timer;
+                second = timer % 60;
+                minute = Math.floor(timer / 60);
+                if (minute < 10) minute = '0' + minute;
+                if (second < 10) second = '0' + second;
+                //hour = Math.floor(timer / 3600);
+                //minute = Math.floor((timer - hour * 3600) / 60);
+                //second = timer - hour * 3600 - minute * 60;
+                //if (hour < 10) hour = '0' + hour;
+                //if (minute < 10) minute = '0' + second;
+                document.querySelector(".timer").innerHTML = minute + ':' + second;
+                // if (stopTimer) {
+                //     document.querySelector(".timer").innerHTML = "00:00";
+                //     timer = 0;
+                //     hour = 0;
+                //     minute = 0;
+                //     second = 0;
+                //     return;
+                // showTimer();
+                // }
+            }, 1000);
+        }
     }
 }
 
-// function stopTimer() {
-//     clearInterval(timeStart); //clearInterval needs to use the variable from the setInterval 
-// }
-//stopTimer();
+function resetTimer() {
+    document.querySelector(".timer").innerHTML = '00:00'; 
+}
+
+function stopTimer() {
+    clearInterval(timeStart); //clearInterval needs to use the variable from the setInterval 
+    timeStart = '';
+}
+
 
 /*
  * Stop the game timer and return seconds elapsed
