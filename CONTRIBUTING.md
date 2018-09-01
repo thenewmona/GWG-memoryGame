@@ -65,3 +65,8 @@ You can try to get the timer to work in the console, and then after that's worki
 Please let me know if this is clear or not. If not or you have more questions, please let me know.
 
 I recommend this read for helping new programmers to more clearly ask for help: http://blog.codeunion.io/2014/09/03/teaching-novices-how-to-debug-code/
+
+8/31/2018
+Had a 1 x 1 session with Carlos Finn, and he walked me through my issues that I had with the timer. 
+Gave me some hints on how to get my modal working 
+Merged my timer brach into the master brach 
