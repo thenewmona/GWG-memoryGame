@@ -4,7 +4,7 @@ let hasFlippedCard = false;
 let lockBoard = false; //this is so the cards won't flip back once they are matched 
 let firstCard, secondCard;
 let timeStart = "";
-let matchCount = 0;
+let matchCount = 0;//added by Carlos
 
 
 //lets us know which card the player clicked so that we can do the match 
@@ -185,15 +185,15 @@ function stopTimer() {
 }
 //get modal element
 
-var modal = document.getElementById('simpleModal');
+let modal = document.getElementById('simpleModal');
 
 // get open modal button don't need this for memory game 
 
-var modalBtn = document.getElementById('modalBtn');//don't need this for memory game
+let modalBtn = document.getElementById('modalBtn');//don't need this for memory game
 
 //get close button 
 
-var closeBtn = document.getElementsByClassName('closeBtn')[0];
+let closeBtn = document.getElementsByClassName('closeBtn')[0];
 
 //Listen for open click
 
