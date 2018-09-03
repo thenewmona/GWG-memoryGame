@@ -136,10 +136,15 @@ body {
     background-color: rgb(20, 163, 92);
     padding: 1em 2em;
     color: #fff;
-    border: 0;
-  
+    border: 0;     
 }
-
+.replay {
+    background-color: rgb(20, 163, 92);
+    padding: 1em 2em;
+    color: #fff;
+    border: 0;
+    margin-left: 14em;
+}
 .button:hover {
     background: rgb(0, 12, 4);
 }

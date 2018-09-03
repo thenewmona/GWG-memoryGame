@@ -3,8 +3,7 @@
 Memory Game walkthrough
 https://www.youtube.com/watch?v=ZniVgo8U7ek FreeCodeCamp
 
-###  Modal
-https://www.youtube.com/watch?v=o5ffh3KUaTM&index=23&t=282s&list=PLYpDB6ynhlX2sClpprIhYihBB0c-VqqkR
+
 
 ### Brad Traversy
 https://www.youtube.com/watch?v=6ophW7Ask_0& list=PLYpDB6ynhlX2sClpprIhYihBB0c-VqqkR
@@ -124,3 +123,11 @@ https://www.google.com/imgres?imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipe
 ## Modal 
 
 https://www.w3schools.com/howto/howto_js_popup.asp
+https://www.w3schools.com/jsref/prop_style_display.asp
+https://www.w3schools.com/cssref/pr_class_display.asp - .style 
+https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp - hide
+https://www.w3schools.com/howto/howto_js_toggle_class.asp - toggle 
+https://www.w3schools.com/jquery/html_toggleclass.asp
+
+###  Modal videos
+https://www.youtube.com/watch?v=o5ffh3KUaTM&index=23&t=282s&list=PLYpDB6ynhlX2sClpprIhYihBB0c-VqqkR

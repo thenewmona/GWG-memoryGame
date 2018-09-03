@@ -4,7 +4,7 @@ let hasFlippedCard = false;
 let lockBoard = false; //this is so the cards won't flip back once they are matched 
 let firstCard, secondCard;
 let timeStart = "";
-let matchCount = 0;//added by Carlos
+let matchCount = 0; //added by Carlos
 
 
 //lets us know which card the player clicked so that we can do the match 
@@ -62,7 +62,7 @@ function disableCards() {
     resetCard();
     matchCount++;
     console.log(matchCount);
-    if (matchCount>=8) {
+    if (matchCount >= 8) {
         console.log('Game over!');
         stopTimer();
         //modal needs to pop up 
@@ -70,7 +70,7 @@ function disableCards() {
 }
 
 //function showModal() { 9/1 not sure why this is here
-    
+
 //}
 
 // if they don't match 
@@ -176,7 +176,7 @@ function startTimer() {
 }
 
 function resetTimer() {
-    document.querySelector(".timer").innerHTML = '00:00'; 
+    document.querySelector(".timer").innerHTML = '00:00';
 }
 
 function stopTimer() {
@@ -189,7 +189,7 @@ let modal = document.getElementById('simpleModal');
 
 // get open modal button don't need this for memory game 
 
-let modalBtn = document.getElementById('modalBtn');//don't need this for memory game
+let modalBtn = document.getElementById('modalBtn'); //don't need this for memory game
 
 //get close button 
 
@@ -197,7 +197,7 @@ let closeBtn = document.getElementsByClassName('closeBtn')[0];
 
 //Listen for open click
 
-modalBtn.addEventListener('click', openModal);//don't need this for memory game
+modalBtn.addEventListener('click', openModal); //don't need this for memory game
 
 //Listen for close click
 closeBtn.addEventListener('click', closeModal);
@@ -208,33 +208,106 @@ window.addEventListener('click', outsideClick);
 
 //function to open Modal
 function openModal() {
-modal.style.display = 'block';
+    modal.style.display = 'block';// this is rendered as a block level element 
 }
 
 //function to close Modal
 function closeModal() {
-  modal.style.display = 'none';
+    modal.style.display = 'none';//element will not be displayed 
 }
 //function to close Modal if outside click
 function outsideClick(e) {
-  if(e.target == modal){  
-  modal.style.display = 'none';
+    if (e.target == modal) {
+        modal.style.display = 'none';
+    }
 }
-}
-//memory game 
 
-/*
- * Stop the game timer and return seconds elapsed
- */
 
+//modal needs to popup on line 58 JS per Carlos
+//     moves = 8; //per Carlos
+
+//open and close modal using toggle  https://www.w3schools.com/jquery/html_toggleclass.asp
+//line 210 openModal()
+//line 215 closeModal()function
+
+// function modalPopUp () {
+//     let toggleModal = document.querySelector('.modal-body');
+//     modal.classList.toggle('hide');
+//}//line 63 HTML
+// }
+//   showTimer();//137 JS
+//   modalPopUp();//232 JS
+
+// modal stats display time /moves/stars
+
+//   function displayStats() { 
+//261 JS need to create HTML class 
+//         1.timer .timer 43 HTML
+//  let timeStat = document.querySelector('.timer');
+//         2.moves .moves 67 HTML 
+//  let movesStat = document.querySelector('.moves');
+//        3.stars  .stars 70 HTML 
+//  let starsStat = document.querySelector('.stars');
+//display clock time .clock 66 HTML
+//  let clockTime = document.querySelector('.clock');
+// let stars = getStars();//254 JS
+
+//  timeStat.innerHTML = `Time = ${clockTime}`;
+//  movesStat.innerHTML = `Moves = ${moves}`;
+//  starsStat.innerHTML = `Stars = ${stars}`;
+// }
+
+
+//show the number of stars left on the modal 
+
+
+//displayStats();//245 JS
 
 //reset game - reset clock - moves -stars- reshuffle the cards 
-//reset timer - stopTimer 
-//reset moves = 0
-//reset stars = 0
-//reset cards
-//game over - stop clock - modal pop's up 
-//replay game
+
+// reset timer line 44 HTML line 178 JS
+//function resetTimer() {
+//     stopTimer();//182 JS
+//     timerOff = true;
+//     time = 0;
+//     showTimer();//137 JS
+// } 
+
+//reset moves line 68 HTML
+//function resetMoves() { 
+//moves = 0;
+//document.querySelecto(.'moves').innerHTML = moves;
+//}
+
+//reset stars line 72-74 HTML
+// function resetStars() {
+//     stars = 0;
+//     let starList = document.querySelectorAll('.star li');
+//     for (star of starList) {
+//         star.style.display = 'inline';// default for .display 
+//     }
+// }
+
+// ////game Over 
+// function gameOver(){
+//stopTimer();//182 JS
+// modalPopUp();//238
+// displayStats();//261 JS
+//}
+
+//Restart the game PlayAgain button line 53 HTML 
+//line 135 JS 
+//function restartGame() {
+//         resetTimer();//178 JS
+//          resetStars();//line 303 
+//          shuffle();//95 JS
+//          closeModal();//need to write the function for this declaration 
+//          resetMoves(); //277 JS
+//          }
+
+//replay game - reset the game via the play again button line 54 HTML popModal
+//  document.querySelector('modalBtn').addEventListener{// 200 JS
+//  });//retartGame function 
 
 
 cards.forEach(card => card.addEventListener('click', flipCard));
