@@ -255,6 +255,9 @@ function outsideClick(e) {
 //  timeStat.innerHTML = `Time = ${clockTime}`;
 //  movesStat.innerHTML = `Moves = ${moves}`;
 //  starsStat.innerHTML = `Stars = ${stars}`;
+function openModal() {
+    modal.style.display = 'block';// this is rendered as a block level element 
+}
 // }
 
 
@@ -265,8 +268,8 @@ function outsideClick(e) {
 
 //reset game - reset clock - moves -stars- reshuffle the cards 
 
-// reset timer line 44 HTML line 178 JS
-//function resetTimer() {
+// reset timer line 44 HTML line 178 JS timer stops, but does not go back to 0
+// function resetTimer() {
 //     stopTimer();//182 JS
 //     timerOff = true;
 //     time = 0;
@@ -274,16 +277,16 @@ function outsideClick(e) {
 // } 
 
 //reset moves line 68 HTML
-//function resetMoves() { 
-//moves = 0;
-//document.querySelecto(.'moves').innerHTML = moves;
-//}
+function resetMoves() { 
+moves = 0;
+document.querySelecto('.moves').innerHTML = moves;
+}
 
-//reset stars line 72-74 HTML
+//reset stars line 72-74 HTML this way all the stars show when the game is reset 
 // function resetStars() {
 //     stars = 0;
-//     let starList = document.querySelectorAll('.star li');
-//     for (star of starList) {
+//     let starList = document.querySelectorAll('.star li');//or should it be .fa fa-star li since .star is actually ul 
+//     for (star of stars) {
 //         star.style.display = 'inline';// default for .display 
 //     }
 // }
@@ -297,13 +300,13 @@ function outsideClick(e) {
 
 //Restart the game PlayAgain button line 53 HTML 
 //line 135 JS 
-//function restartGame() {
-//         resetTimer();//178 JS
+function replayGame() {
+         //resetTimer();//line 178 JS
 //          resetStars();//line 303 
-//          shuffle();//95 JS
+        shuffle();//line 95 JS
 //          closeModal();//need to write the function for this declaration 
-//          resetMoves(); //277 JS
-//          }
+        resetMoves(); //277 JS
+        }
 
 //replay game - reset the game via the play again button line 54 HTML popModal
 //  document.querySelector('modalBtn').addEventListener{// 200 JS
