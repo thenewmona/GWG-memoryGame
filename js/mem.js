@@ -55,7 +55,7 @@ function checkForMatch() {
     //startTimer();
 }
 
-//if => 8 modal popup 
+//if => 8 modal popup still need to configure this 
 function disableCards() {
     firstCard.removeEventListener('click', flipCard); //remove the eventListener if it's a match. You have to add the event and the function that you called 
     secondCard.removeEventListener('click', flipCard); //remove the eventListener if it's a match
@@ -65,6 +65,7 @@ function disableCards() {
     if (matchCount >= 8) {
         console.log('Game over!');
         stopTimer();
+        //   modalPopUp();//232 JS
         //modal needs to pop up 
     }
 }
@@ -208,12 +209,12 @@ window.addEventListener('click', outsideClick);
 
 //function to open Modal
 function openModal() {
-    modal.style.display = 'block';// this is rendered as a block level element 
+    modal.style.display = 'block'; // this is rendered as a block level element 
 }
 
 //function to close Modal
 function closeModal() {
-    modal.style.display = 'none';//element will not be displayed 
+    modal.style.display = 'none'; //element will not be displayed 
 }
 //function to close Modal if outside click
 function outsideClick(e) {
@@ -224,7 +225,7 @@ function outsideClick(e) {
 
 
 //modal needs to popup on line 58 JS per Carlos
-//     moves = 8; //per Carlos
+//     moves >= 8; Game Over  //per Carlos
 
 //open and close modal using toggle  https://www.w3schools.com/jquery/html_toggleclass.asp
 //line 210 openModal()
@@ -236,7 +237,7 @@ function outsideClick(e) {
 //}//line 63 HTML
 
 //   showTimer();//137 JS
-//   modalPopUp();//232 JS
+
 
 // modal stats display time /moves/stars
 
@@ -256,7 +257,6 @@ function outsideClick(e) {
 // }
 
 //show the number of stars left on the modal 
-
 
 //displayStats();//245 JS
 
@@ -295,12 +295,12 @@ function outsideClick(e) {
 //Restart the game PlayAgain button line 53 HTML 
 //line 135 JS 
 // function replayGame() {
-//          //resetTimer();//line 178 JS
-// //          resetStars();//line 303 
-//         shuffle();//line 95 JS
-// //          closeModal();//need to write the function for this declaration 
-//         resetMoves(); //277 JS
-//         }
+//     resetTimer(); //line 178 JS
+//     resetStars(); //line 303 
+//     shuffle(); //line 95 JS
+//     closeModal(); //need to write the function for this declaration 
+//     resetMoves(); //277 JS
+// }
 
 //replay game - reset the game via the play again button line 54 HTML popModal
 //  document.querySelector('modalBtn').addEventListener{// 200 JS
