@@ -14,6 +14,14 @@ function flipCard() {
     if (this === firstCard) return; //https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval#The_this_problem
 
     this.classList.add('flip');
+    //suggestions from Chase for the Modal popup 
+    let cardImages = this.childNodes;
+  cardImages[1].style.display = "block";
+  console.log(cardImages[1]);
+  cardImages[3].style.display = "none";
+  console.log(cardImages[3]);
+
+  console.log(this + ": flipped");
 
     //this keyword is dynamically set to this context
     //it is representing memory card element which is was fired
@@ -65,6 +73,7 @@ function disableCards() {
     if (matchCount >= 8) {
         console.log('Game over!');
         stopTimer();
+        modal.style.display = "block";
         //   modalPopUp();//232 JS
         //modal needs to pop up 
     }
@@ -83,6 +92,13 @@ function unflipCards() {
         // setTimeout excutes after waiting a specified amount of time
         firstCard.classList.remove('flip');
         secondCard.classList.remove('flip');
+        //help from chase , basically I need to add the style.display for the modal to popup 
+        firstCardChildren = firstCard.childNodes;
+        secondCardChildren = secondCard.childNodes;
+        firstCardChildren[3].style.display = "block";
+        firstCardChildren[1].style.display = "none";
+        secondCardChildren[3].style.display = "block";
+        secondCardChildren[1].style.display = "none";
         resetCard();
 
     }, 700);
@@ -223,9 +239,13 @@ function outsideClick(e) {
     }
 }
 
+//9-3 Goals for today 
+//1. get the playAgain button to replay the game and not popup the Modal
+//2. get the modal to popup when the game is done
+//3. get the stats to show up on the modal 
 
 //modal needs to popup on line 58 JS per Carlos
-//     moves >= 8; Game Over  //per Carlos
+//     moves = 8; Game Over  //8/31 per Carlos
 
 //open and close modal using toggle  https://www.w3schools.com/jquery/html_toggleclass.asp
 //line 210 openModal()
