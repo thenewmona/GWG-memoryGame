@@ -234,7 +234,7 @@ function outsideClick(e) {
 //     let toggleModal = document.querySelector('.modal-body');
 //     modal.classList.toggle('hide');
 //}//line 63 HTML
-// }
+
 //   showTimer();//137 JS
 //   modalPopUp();//232 JS
 
@@ -251,15 +251,9 @@ function outsideClick(e) {
 //display clock time .clock 66 HTML
 //  let clockTime = document.querySelector('.clock');
 // let stars = getStars();//254 JS
-
-//  timeStat.innerHTML = `Time = ${clockTime}`;
-//  movesStat.innerHTML = `Moves = ${moves}`;
-//  starsStat.innerHTML = `Stars = ${stars}`;
-function openModal() {
-    modal.style.display = 'block';// this is rendered as a block level element 
-}
+// 
 // }
-
+// }
 
 //show the number of stars left on the modal 
 
@@ -277,10 +271,10 @@ function openModal() {
 // } 
 
 //reset moves line 68 HTML
-function resetMoves() { 
-moves = 0;
-document.querySelecto('.moves').innerHTML = moves;
-}
+// function resetMoves() { 
+// moves = 0;
+// document.querySelecto('.moves').innerHTML = moves;
+// }
 
 //reset stars line 72-74 HTML this way all the stars show when the game is reset 
 // function resetStars() {
@@ -300,13 +294,13 @@ document.querySelecto('.moves').innerHTML = moves;
 
 //Restart the game PlayAgain button line 53 HTML 
 //line 135 JS 
-function replayGame() {
-         //resetTimer();//line 178 JS
-//          resetStars();//line 303 
-        shuffle();//line 95 JS
-//          closeModal();//need to write the function for this declaration 
-        resetMoves(); //277 JS
-        }
+// function replayGame() {
+//          //resetTimer();//line 178 JS
+// //          resetStars();//line 303 
+//         shuffle();//line 95 JS
+// //          closeModal();//need to write the function for this declaration 
+//         resetMoves(); //277 JS
+//         }
 
 //replay game - reset the game via the play again button line 54 HTML popModal
 //  document.querySelector('modalBtn').addEventListener{// 200 JS
