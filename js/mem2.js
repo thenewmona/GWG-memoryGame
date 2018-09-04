@@ -5,7 +5,7 @@ let lockBoard = false; //this is so the cards won't flip back once they are matc
 let firstCard, secondCard;
 let timeStart = "";
 let matchCount = 0; //added by Carlos
-
+//let resetBtn;
 
 //lets us know which card the player clicked so that we can do the match 
 
@@ -138,9 +138,9 @@ function restartGame() {
 }
 //restartBtn = document.getElementsByClassName("resetBtn");
 
-// restartBtn.addEventListener('click', function(e) {
-// });
-//     restartBtn = document.getElementsByClassName("resetBtn");
+restartBtn.addEventListener('click', function(e) {
+});
+    restartBtn = document.getElementsByClassName("resetBtn");
 
 function startTimer() {
     if (resetGame == true) {
