@@ -1,4 +1,8 @@
-# Memory Game Project
+# Mona's Memory Game Project
+# How to Play the Game 
+# Resources used for this projects 
+# Recognition 
+# Created by Ramona Saintandre 
 
 ## Table of Contents
 
