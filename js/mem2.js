@@ -43,20 +43,17 @@ function disableCards() {
     matchCount++;
     console.log(matchCount);
     //if matchCount equals 8, all cards have been successfully matched and the game is over.
-    if (matchCount >= 8) {
+    if (matchCount >= 2) {
         gameOver();
-        
+
     }
-    
+
 }
-
-
 
 function gameOver() {
     stopTimer();
     openModal();
 }
-
 
 // if they don't match 
 function unflipCards() {
@@ -135,7 +132,7 @@ function restartGame() {
     moves = 0;
     const movesText = document.querySelector('.moves');
     movesText.innerHTML = moves;
-  
+
 }
 //restartBtn = document.getElementsByClassName("resetBtn");
 
@@ -145,7 +142,7 @@ function restartGame() {
 
 function startTimer() {
     if (resetGame == true) {
-        let timer = 0;  
+        let timer = 0;
         if (timeStart === "") {
             timeStart = setInterval(() => { //8-30 if i use => timer works, change it per https://www.w3schools.com/js/js_timing.asp it acts like it wants to start but doesnt
                 ++timer;
@@ -167,7 +164,7 @@ function startTimer() {
 
 function resetTimer() {
     document.querySelector(".timer").innerHTML = '00:00';
-    [hour, minute, second] = [0,0,0];
+    [hour, minute, second] = [0, 0, 0];
 }
 
 function stopTimer() {
@@ -216,13 +213,21 @@ function resetStars() {
 }
 //9-4reset game button with help from Danny Smith 9-4
 let resetBtn =
-document.getElementById('resetBtn')
-resetBtn. addEventListener('click', resetPlay, false)
-function resetPlay () {
+    document.getElementById('resetBtn')
+resetBtn.addEventListener('click', resetPlay, false)
+
+function resetPlay() {
     stopTimer();
     resetTimer();
     resetMoves();
     resetStars();
+}
+// 9-4 fixed my moves function with the help of Danny 
+function resetMoves() {
+    const movesText = document.querySelector('moves');
+    let moves = 0;
+    movesText.innerHTML = moves;
+
 }
 shuffle();
 cards.forEach(card => card.addEventListener('click', flipCard));

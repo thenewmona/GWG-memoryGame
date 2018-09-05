@@ -70,3 +70,11 @@ I recommend this read for helping new programmers to more clearly ask for help: 
 Had a 1 x 1 session with Carlos Finn, and he walked me through my issues that I had with the timer. 
 Gave me some hints on how to get my modal working 
 Merged my timer brach into the master brach 
+
+9/2/2018 
+Recieved more assistance from Carlos with my modal popup issues, please refer to comments 
+
+9/4/2018
+With help from Danny Smith, was finally able to get my timer. 
+major typos was the issues. 
+Also had some HTML issues with closing tags 

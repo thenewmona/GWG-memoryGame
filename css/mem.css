@@ -100,12 +100,12 @@ body {
     font-size: 30;
 }
 
- #resetBtn {
-        float: right;
+#resetBtn {
+    float: right;
     cursor: pointer;
     padding-left: 150px;
     font-size: 30px;
-    
+    margin-left: 15em;
 }
 
 .scoreheader .moves {
@@ -137,15 +137,17 @@ body {
     background-color: rgb(20, 163, 92);
     padding: 1em 2em;
     color: #fff;
-    border: 0;     
+    border: 0;
 }
+
 .replay {
     background-color: rgb(20, 163, 92);
     padding: 1em 2em;
     color: #fff;
     border: 0;
-    margin-left: 14em;
+    /* margin-left: 14em; */
 }
+
 .button:hover {
     background: rgb(0, 12, 4);
 }
