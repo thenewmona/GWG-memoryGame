@@ -9,7 +9,7 @@ The game starts when you click the fist card.
 After you make 8 matches, you will get a surprise 
 
 # Resources used for this projects Please refer to 
-*[resources](https://github.com/thenewmona/GWG-memoryGame/blob/master/resources.md #resources)
+[resources](https://github.com/thenewmona/GWG-memoryGame/blob/master/resources.md)
 
 # Issues 
 1. The stars and the moves do not update on the modal 
