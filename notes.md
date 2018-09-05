@@ -72,3 +72,6 @@ Reached out on slack and Facebook, to figure out what it is that I am not gettin
 `Uncaught ReferenceError: toggleCards is not defined
     at addToggleCard (app.js:70)
     at HTMLUListElement.deck.addEventListener.event (app.js:53)`
+
+    ### HTML Validator error 
+    https://www.w3.org/wiki/HTML/Usage/Headings/Missing

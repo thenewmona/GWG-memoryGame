@@ -45,8 +45,9 @@ function disableCards() {
     //if matchCount equals 8, all cards have been successfully matched and the game is over.
     if (matchCount >= 8) {
         gameOver();
-
+        
     }
+    
 }
 
 
@@ -138,9 +139,9 @@ function restartGame() {
 }
 //restartBtn = document.getElementsByClassName("resetBtn");
 
-restartBtn.addEventListener('click', function(e) {
-});
-    restartBtn = document.getElementsByClassName("resetBtn");
+// restartBtn.addEventListener('click', function(e) {
+// });
+//     restartBtn = document.getElementsByClassName("resetBtn");
 
 function startTimer() {
     if (resetGame == true) {
@@ -206,6 +207,22 @@ function outsideClick(e) {
         modal.style.display = 'none';
     }
 }
-
+// 9-4 Reset Stars with help from Danny Smith from midwest_Fend cohort
+function resetStars() {
+    let starsList = document.querySelectorAll('.stars li');
+    for (stars of starlist) {
+        stars.style.display = 'block';
+    }
+}
+//9-4reset game button with help from Danny Smith 9-4
+let resetBtn =
+document.getElementById('resetBtn')
+resetBtn. addEventListener('click', resetPlay, false)
+function resetPlay () {
+    stopTimer();
+    resetTimer();
+    resetMoves();
+    resetStars();
+}
 shuffle();
 cards.forEach(card => card.addEventListener('click', flipCard));

@@ -100,9 +100,8 @@ body {
     font-size: 30;
 }
 
-.scoreheader .reset {
-    
-    float: right;
+.scoreheader .resetBtn {
+        float: right;
     cursor: pointer;
     padding-left: 150px;
     font-size: 30px;

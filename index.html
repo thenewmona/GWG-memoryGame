@@ -4,13 +4,13 @@
 <head>
   <meta charset="UTF-8">
 
-  <title> Ramona's FCC Memory Game</title>
+  <title> <h1>Ramona's FCC Memory Game </h1></title>
 
   <link rel="stylesheet" href="css/mem.css">
   <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 
-<!--consequence stars -->
+<!-- stars -->
 
 <body>
 
@@ -21,6 +21,7 @@
     </header>
 
     <!-- ScorePanel stars - timer - reset -->
+
 
     <section class="scoreheader">
 
@@ -41,46 +42,46 @@
       <span class="move">Moves</span>
       <!--timer-->
       <span class="timer">0:00</span>
+    </section>
 
-      <!--restart-->
-      <div class="resetBtn">restart
-        <i class="fa fa-repeat"></i>
-      </div>
+    <!--restart-->
+    <div id= "resetBtn" class = "reset">reset
+      <i class="fa fa-repeat"></i>
+    </div>
     </section>
 
 
     <!--modal Brad Traversy https://www.youtube.com/watch?v=6ophW7Ask_0 need to reset game to Play again button 
     <button id="modalBtn" class="button">Play Again!!!</button>also the reset button-->
-        <!--need this inside the modal not outside -->
-    
+    <!--need this inside the modal not outside -->
+
     <div id="simpleModal" class="modal">
       <div class="modal-content">
-        <div class="modal-header">            
-            <span class="closeBtn">&times;</span>          
-          <h2> Yeah !!!!</h2>
+        <div class="modal-header">
+          <span class="closeBtn">&times;</span>
+          <h2> Yeah !!!! </h2>
         </div>
 
         <div class="modal-body">
           <h3>Congratulations!</h3>
           <p>Your finishing time is
-            <div class= "clock"> 0:00 </div></p>
-            <div class= "moves"> Total moves = </div> 
+            <div class="clock"> 0:00 </div>          
+            <div class= "moves"></div>  
           </p>
-          <p>You earned 
-            <ul style = "list-style-type: none"class =stars">
+
+            <ul style="list-style-type: none" class="stars">
               <li><i class="fa fa-star"></i></li>
               <li><i class="fa fa-star"></i></li>
               <li><i class="fa fa-star"></i></li>
-              Stars
             </ul>
-           
-          </p>
+          
+
         </div>
         <div class="modal-footer">
           <h3>Your Memory is Great !!!!</h3>
-          <button id="modalBtn" class="replay"onclick="restartGame()">Play Again!!!</button>
-          
-          
+          <button id="modalBtn" class="replay" onclick="restartGame()">Play Again!!!</button>
+
+
         </div>
       </div>
     </div>
@@ -167,7 +168,7 @@
         <img class="front-face" src="img/three.svg" alt="three" />
         <img class="back-face" src="img/LEARN.svg" alt="JS Badge" />
       </div>
-
+     
       <!--background hide -->
       <!--body-->
       <!--heading with title -->
@@ -175,12 +176,10 @@
       <!--replay buttons yes/no -->
       <!---->
       <!---->
-    </section>
-    
+  
+  </section>
 
-
-
-    <script src="js/mem2.js"></script>
+</div>
+  <script src="js/mem2.js"></script>
 </body>
-
 </html>
