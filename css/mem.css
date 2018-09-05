@@ -100,11 +100,12 @@ body {
     font-size: 30;
 }
 
-.scoreheader .resetBtn {
+ #resetBtn {
         float: right;
     cursor: pointer;
     padding-left: 150px;
     font-size: 30px;
+    
 }
 
 .scoreheader .moves {
