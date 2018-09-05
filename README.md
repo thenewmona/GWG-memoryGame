@@ -20,8 +20,11 @@ After you make 8 matches, you will get a surprise
    
 # Recognition 
 Need to send a big huge shoutout to my co-hort, we may not be winning the co-hort challenge.
+
 But in my book, we won something much more, a great support system and some great friendships. 
+
 Carlos Finn, you patience is almost saintly, you came just a the right time. 
+
 not only with helping me resolve the issue, but your affirmation that you gave me that I can complete this. 
 
 
