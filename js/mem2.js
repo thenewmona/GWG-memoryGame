@@ -43,7 +43,7 @@ function disableCards() {
     matchCount++;
     console.log(matchCount);
     //if matchCount equals 8, all cards have been successfully matched and the game is over.
-    if (matchCount >= 2) {
+    if (matchCount >= 8) {
         gameOver();
 
     }
